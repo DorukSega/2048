@@ -1,0 +1,106 @@
+:root {
+    --background: #FAF8EF;
+    --brownxxx: #776E65;
+    --brownxx: #8F7A66;
+    --brownx: #BBADA0;
+    --brown: #eee4da;
+    --gridBack: #eee4da59;
+    --white: white;
+}
+
+.restart {
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -drag: none;
+}
+
+
+body {
+    margin: auto;
+    aspect-ratio: 3 / 4;
+    max-width: 100vw;
+    max-height: 100vh;
+    background-color: var(--background);
+    font-family: 'Verdana';
+    gap: 2vh;
+    color: var(--white);
+    overflow: hidden;
+}
+
+body, .top {
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    gap: 2vh;
+}
+
+.up {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 4vh;
+    gap: 4vh;
+    border-radius: 2vh;
+}
+
+.part {
+    background-color: var(--brownx);
+    color: var(--brown);
+    text-align: center;
+    flex: 1;
+}
+
+.part>#SCORE, .part>#BEST {
+    color: var(--white);
+}
+
+.restart {
+    background-color: var(--brownxxx);
+    font-size: 3vh;
+    text-align: center;
+    border-radius: 1vh;
+    margin: 0 auto 0;
+    padding: 1vh 2vh 1vh;
+    cursor: pointer;
+}
+
+.grid {
+    aspect-ratio: 1 / 1;
+    border-radius: 1vh;
+    background-color: var(--brownx);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    box-sizing: border-box;
+    padding: 2%;
+    gap: 2%;
+}
+
+.grid>div {
+    border-radius: .5vh;
+    background-color: var(--gridBack);
+
+    font-size: 400%;
+
+    overflow: hidden;
+}
+
+.grid>div>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
